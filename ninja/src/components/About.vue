@@ -1,0 +1,117 @@
+<template>
+    <div class="about">
+        <h1 class="about-header">
+            About Ninja
+        </h1>
+
+
+        <h2 class="rules-title">Rules</h2>
+
+        <div class="row rules-grid">
+            <div class="col-6">
+
+                <div class="row">
+                    <div class="col-8">
+                        <p class="header-rules">The game is based on a classic hand game- Rock Paper Scissors
+                            where each player has an army armed with Rocks, Paper, and Scissors.
+                            <br>
+                            To win the game capture your opponent's flag. </p>
+                    </div>
+
+                    <div class="col-4">
+                        <img src="../assets/caroflag.png" width="80" height="80" />
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-8">
+                        <p>Scissors beats Paper  </p>
+                    </div>
+                    <div class="col-4">
+                        <p> <img src="../assets/helenschere.png" width="80" height="80" align="end"/> </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+
+                <div class="row">
+                    <div class="col-8">
+                        <p>Paper beats Rock </p>
+
+                    </div>
+                    <div class="col-4">
+                        <p> <img src="../assets/helenpapier.png" width="80" height="80" align="end"/></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-8">
+                        <p>Rock beats Scissors </p>
+                    </div>
+                    <div class="col-4">
+                        <p> <img src="../assets/carostein.png" width="80" height="80" align="end"/></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="history">
+            <h2>Creation of Rock Paper Scissors</h2>
+            <p>  The earliest form of Rock Paper Scissors was created in Japan and is called Janken.
+                This is a variation of the Chinese games introduced in the 17th century.
+                Janken uses the Rock, Paper and Scissors signs. It is the game that the modern version of Rock Paper Scissors derives from directly.
+                Hand-games using gestures to represent the three conflicting elements of rock,
+                paper and scissors have been most common since the modern version of the game was created in the late 19th Century.
+                This was between the Edo and Meiji periods.
+                <br>
+                By the early 20th century, Rock Paper Scissors had spread beyond Asia,
+                especially through increased Japanese contact with the West.
+                Its English language name is therefore taken from a translation of the names of the three Japanese hand-gestures
+                for rock,paper and scissors; elsewhere in Asia the open-palm gesture represents “cloth” rather than “paper”.
+                The shape of the scissors is also adopted from the Japanese style.
+
+            </p>
+
+        </div>
+        <p> Ninja is a Opensource Project, if you find Bugs please report here:
+            <a href="https://github.com/HelenNganga/Ninja">Github</a></p>
+
+
+        <strong>&copy; 2020 Helen Nganga &amp; Julia Burri </strong>
+
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "About"
+    }
+</script>
+
+<style scoped>
+
+    .about-header {
+        color: darkslategray;
+        text-align: center;
+        padding-top: 3vw;
+        font-weight: bold
+    }
+
+    .rules-title {
+        padding-left: 3vw
+    }
+
+    .rules-grid {
+        margin: 3vw
+    }
+
+    .history {
+        width: 40%;
+        text-align: justify;
+        margin: 3vw
+    }
+
+
+</style>
