@@ -53,11 +53,7 @@
                     <h4 class="card-title">Julia Burri</h4>
                     <p class="card-text">
                         Best Game EVER!!!!!! <br></p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
+                    <b-form-rating value="5" variant="warning" class="mb-2"></b-form-rating>
                 </div>
 
             </div>
@@ -74,11 +70,7 @@
                     <h4 class="card-title">Helen Nganga</h4>
                     <p class="card-text">
                         Cool Game, but i always loose <br></p>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star"></span>
+                    <b-form-rating value="4" variant="warning" class="mb-2"></b-form-rating>
                 </div>
 
             </div>
@@ -96,6 +88,10 @@
 </script>
 
 <style scoped>
+
+    .home {
+        background-image: url("../assets/bambus.jpg");
+    }
 
     .home-header {
         text-align: center;

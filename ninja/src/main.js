@@ -8,6 +8,7 @@ import Highscore from './components/Highscore'
 import About from './components/About'
 import Home from './components/Home.vue'
 import VueRouter from 'vue-router';
+import Toast from "vue-toastification";
 import VueNativeSock from 'vue-native-websocket'
 
 Vue.use(BootstrapVue)
@@ -21,6 +22,7 @@ Vue.use(VueNativeSock, 'ws://localhost:9000/websocket', {
   reconnectionAttempts: Infinity, // (Number) number of reconnection attempts before giving up (Infinity),
   reconnectionDelay: 10, // (Number) how long to initially wait before attempting a new (1000)
 });
+Vue.use(Toast, {});
 
 const router = new VueRouter({
   mode: 'history',
