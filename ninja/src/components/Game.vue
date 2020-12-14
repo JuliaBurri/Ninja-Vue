@@ -34,7 +34,7 @@
         created() {
             {
                 // GET /someUrl
-                this.$http.get('http://localhost:9000/json').then(response => {
+                this.$http.get('json').then(response => {
 
                     // get body data
                   console.log(response.body);
