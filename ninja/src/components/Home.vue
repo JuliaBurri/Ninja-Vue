@@ -24,7 +24,7 @@
                             <p class="card-text">
                                 Lets Play<br>
                             </p>
-                            <a href="/game" class="btn btn-secondary btn-block">Game</a>
+                            <a href="/game" class="btn btn-secondary btn-block" @click="this.initSocket()">Game</a>
                         </div>
                     </div>
                 </div>
@@ -83,8 +83,20 @@
 
 <script>
     export default {
-        name: "Home"
+        name: "Home",
+
+        initSocket() {
+            console.log("in Home")
+            this.$options.sockets.onmessage = (data) => {
+                console.log("onmessage")
+                const json = JSON.parse(data.data);
+                window.console.log("Came in: ", json);
+            };
+        }
     }
+
+
+
 </script>
 
 <style scoped>
