@@ -24,6 +24,7 @@
 
     export default {
         name: "Game",
+        state: String,
 
         components: {
             interaction: Interaction,
@@ -31,9 +32,19 @@
         },
 
         created() {
-            console.log("in Game")
-            this.$socket.send(JSON.stringify({type: "json"}))
+            {
+                // GET /someUrl
+                this.$http.get('http://localhost:9000/json').then(response => {
+
+                    // get body data
+                  console.log(response.body);
+
+                });
+            }
         }
+
+
+
     }
 </script>
 

@@ -10,9 +10,12 @@ import Home from './components/Home.vue'
 import VueRouter from 'vue-router';
 import Toast from "vue-toastification";
 import VueNativeSock from 'vue-native-websocket'
+import VueResource from 'vue-resource'
+
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+Vue.use(VueResource)
 
 Vue.config.productionTip = false
 
