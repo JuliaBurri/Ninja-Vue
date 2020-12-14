@@ -31,12 +31,8 @@
         },
 
         created() {
-            this.$options.sockets.onmessage = (data) => {
-                console.log("onmessage")
-                const json = JSON.parse(data.data);
-                window.console.log("Came in: ", json);
-            };
-            //this.$socket.send(JSON.stringify({type: "json"}))
+            console.log("in Game")
+            this.$socket.send(JSON.stringify({type: "json"}))
         }
     }
 </script>
