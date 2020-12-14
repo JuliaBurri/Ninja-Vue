@@ -1,20 +1,19 @@
 <template>
     <div class="game">
         <b-container class="game-container" fluid>
-            <b-row >
+            <b-row>
 
                 <b-col class="col-6">
                     <field></field>
                 </b-col>
 
                 <b-col class="interaction col-2">
-                    <interaction ></interaction>
+                    <interaction :state="this.state"></interaction>
                 </b-col>
 
             </b-row>
         </b-container>
-
-        </div>
+    </div>
 
 </template>
 
@@ -25,6 +24,13 @@
     export default {
         name: "Game",
 
+        data() {
+            return {
+                state: String,
+                desk: [],
+            }
+        },
+
         components: {
             interaction: Interaction,
             field: Field
@@ -32,11 +38,13 @@
 
         created() {
             this.$options.sockets.onmessage = (data) => {
-                console.log("onmessage")
                 const json = JSON.parse(data.data);
                 window.console.log("Came in: ", json);
+                this.state = json.state;
+                this.desk = json.desk;
             };
-            //this.$socket.send(JSON.stringify({type: "json"}))
+
+            // this.$socket.send(JSON.stringify({type: "state"}))
         }
     }
 </script>

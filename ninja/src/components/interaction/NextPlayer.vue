@@ -1,5 +1,5 @@
 <template>
-    <div class="next-player">
+    <div class="next-player" v-if="this.state === 'WALKED'">
         <p>Next Player ? </p>
         <button v-on:click="nextPlayer()" class="btn btn-primary m-2">Next!</button>
     </div>
@@ -8,9 +8,12 @@
 <script>
     export default {
         name: "NextPlayer",
+        props: {
+            state: String
+        },
         methods: {
             nextPlayer() {
-                console.log("next")
+                this.$socket.send(JSON.stringify({type: "next"}))
             }
         }
     }

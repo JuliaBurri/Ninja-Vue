@@ -1,15 +1,13 @@
 <template>
     <div class="interaction">
-        <add-player
-                v-bind:state="this.state"
-                    v-if="this.state === 'INSERTING_NAME2' || this.state === 'INSERTING_NAME2'">
+        <add-player v-bind:state="this.state">
         </add-player>
 
-        <set-flag v-if="this.state === 'SET_FLAG'"></set-flag>
+        <set-flag v-bind:state="this.state"></set-flag>
 
-        <walk v-if="this.state === 'WALK'"></walk>
+        <walk v-bind:state="this.state"></walk>
 
-        <next-player v-if="this.state === 'WALKED'"></next-player>
+        <next-player v-bind:state="this.state"></next-player>
 
     </div>
 
@@ -33,11 +31,6 @@
             'walk' : Walk,
             'next-player': NextPlayer
         },
-
-        created() {
-            this.state = "SET_FLAG";
-        }
-
     }
 </script>
 
