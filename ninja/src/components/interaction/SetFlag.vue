@@ -20,16 +20,15 @@
 
         props: {
             state: String,
+            selected: String
         },
 
         methods: {
             setFlag1() {
-                console.log("set flag 1")
-                this.$socket.send(JSON.stringify({type: "setFlag1", row: '0', col: '0'}))
+                this.$socket.send(JSON.stringify({type: "setFlag1", row: this.selected.charAt(0), col: this.selected.charAt(1)}))
             },
             setFlag2() {
-                console.log("set flag 2")
-                this.$socket.send(JSON.stringify({type: "setFlag2", row: '4', col: '4'}))
+                this.$socket.send(JSON.stringify({type: "setFlag2", row: this.selected.charAt(0), col: this.selected.charAt(1)}))
             }
         }
     }

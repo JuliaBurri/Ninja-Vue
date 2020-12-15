@@ -1,8 +1,8 @@
 <template>
     <div class="walk" v-if="this.state === 'TURN'">
         <p>Select a Ninja and choose a direction</p>
-        <b-form-select v-model="selected" :options="options"></b-form-select>
-        <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
+        <b-form-select v-model="dir" :options="options"></b-form-select>
+        <div class="mt-3">Selected: <strong>{{ dir }}</strong></div>
         <button v-on:click="walk()" class="btn btn-primary m-2">Walk!</button>
     </div>
 </template>
@@ -12,12 +12,13 @@
         name: "Walk",
 
         props: {
-            state: String
+            state: String,
+            selected: String
         },
 
         data() {
             return {
-                selected: null,
+                dir: null,
                 options: [
                     { value: null, text: 'Please select a direction' },
                     { value: 'u', text: 'UP'},
@@ -30,7 +31,7 @@
         },
         methods: {
             walk() {
-                this.$socket.send(JSON.stringify({type: "walk", row: '1', col: '1', d: 'd'}))
+                this.$socket.send(JSON.stringify({type: "walk", row: this.selected.charAt(0), col: this.selected.charAt(1), d: this.dir}))
             }
         }
     }

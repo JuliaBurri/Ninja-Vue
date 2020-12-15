@@ -1,10 +1,11 @@
 <template>
     <div class="interaction">
+
         <add-player v-bind:state="this.state"></add-player>
 
-        <set-flag v-bind:state="this.state"></set-flag>
+        <set-flag v-bind:state="this.state" :selected="this.selected"></set-flag>
 
-        <walk v-bind:state="this.state"></walk>
+        <walk v-bind:state="this.state" :selected="this.selected"></walk>
 
         <next-player v-bind:state="this.state"></next-player>
 
@@ -21,7 +22,8 @@
     export default {
         name: "Interaction",
         props: {
-            state: String
+            state: String,
+            selected: String,
         },
 
         components: {

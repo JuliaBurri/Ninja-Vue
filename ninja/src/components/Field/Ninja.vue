@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-btn class="ninja-btn" v-bind:class="this.type" v-bind:id="this.id"></b-btn>
+
     </div>
 </template>
 
@@ -11,6 +11,12 @@
         props: {
             type: String,
             id: String
+        },
+
+        data() {
+            return {
+                selected: ''
+            }
         },
     }
 </script>

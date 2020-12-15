@@ -4,11 +4,11 @@
             <b-row>
 
                 <b-col class="col-6">
-                    <Field :field="this.field"></Field>
+                    <Field @clicked="onClickChild" :field="this.field"></Field>
                 </b-col>
 
                 <b-col class="interaction col-2">
-                    <interaction :state="this.state"></interaction>
+                    <interaction :state="this.state" :selected="this.selected"></interaction>
                 </b-col>
 
             </b-row>
@@ -24,12 +24,21 @@
     export default {
         name: "Game",
         state: String,
+        selected: String,
 
         data() {
             return {
                 state: String,
                 field: Array,
+                selected: String
             }
+        },
+
+        methods: {
+            onClickChild(value) {
+                this.selected = value;
+                console.log("SELECTED: " + this.selected)
+            },
         },
 
         components: {
