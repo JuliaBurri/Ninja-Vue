@@ -1,8 +1,8 @@
 <template>
     <div class="field">
         <b-container>
-            <div class="row mx-0">
-            <div class="col-2" v-bind:key="i" v-for="i in 36">
+            <div class="row">
+            <div class="col-md-2" v-bind:key="i" v-for="i in 36">
                         <ninja :type="field[i-1].cell.ninja.weapon"></ninja>
             </div>
             </div>
@@ -36,6 +36,10 @@
 </script>
 
 <style scoped>
+.field {
+    margin-left: 5vw;
+    width: 60%;
+}
 
 
 </style>

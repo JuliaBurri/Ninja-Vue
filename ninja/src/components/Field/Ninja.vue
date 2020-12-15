@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-btn class="ninja-btn" v-bind:class="this.type"></b-btn>
+        <b-btn class="ninja-btn" v-bind:class="this.type" v-bind:id="this.id"></b-btn>
     </div>
 </template>
 
@@ -9,7 +9,8 @@
         name: "Ninja",
 
         props: {
-            type: String
+            type: String,
+            id: String
         },
     }
 </script>
@@ -18,10 +19,10 @@
     .ninja-btn {
         width: 80px;
         height: 80px;
-        border-radius: 0px;
         background-repeat: no-repeat;
         background-size: 80px;
-        background-color: transparent;
+        background-color: lightgray;
+
     }
 
     .f{
