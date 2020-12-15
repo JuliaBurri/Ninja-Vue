@@ -38,6 +38,11 @@
         },
 
         created() {
+
+            this.$socket.onopen = () => {
+                console.log('WebSocket opened');
+                this.$socket.send(JSON.stringify({type: "state"}))
+            }
             this.$options.sockets.onmessage = (data) => {
                 const json = JSON.parse(data.data);
                 window.console.log("Came in: ", json);
@@ -45,7 +50,7 @@
                 this.desk = json.desk;
             };
 
-            // this.$socket.send(JSON.stringify({type: "state"}))
+            this.$socket.send(JSON.stringify({type: "state"}))
         }
     }
 </script>
