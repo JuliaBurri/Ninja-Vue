@@ -4,7 +4,7 @@
             <b-row>
 
                 <b-col class="col-6">
-                    <field></field>
+                    <Field :field="this.field"></Field>
                 </b-col>
 
                 <b-col class="interaction col-2">
@@ -28,13 +28,13 @@
         data() {
             return {
                 state: String,
-                desk: [],
+                field: Array,
             }
         },
 
         components: {
             interaction: Interaction,
-            field: Field
+            Field: Field
         },
 
         created() {
@@ -42,7 +42,7 @@
                 const json = JSON.parse(data.data);
                 window.console.log("Came in: ", json);
                 this.state = json.state;
-                this.desk = json.desk;
+                this.field = json.desk.field;
             };
 
             // this.$socket.send(JSON.stringify({type: "state"}))

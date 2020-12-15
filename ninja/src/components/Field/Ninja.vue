@@ -24,19 +24,19 @@
         background-color: transparent;
     }
 
-    .flag {
+    .f{
         background-image: url("../../assets/caroflag.png") ;
     }
 
-    .scissor {
+    .s {
         background-image: url("../../assets/helenschere.png") ;
     }
 
-    .paper {
+    .p {
         background-image: url("../../assets/helenpapier.png") ;
     }
 
-    .rock {
+    .r {
         background-image: url("../../assets/carostein.png") ;
     }
 

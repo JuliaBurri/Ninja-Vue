@@ -1,7 +1,6 @@
 <template>
     <div class="interaction">
-        <add-player v-bind:state="this.state">
-        </add-player>
+        <add-player v-bind:state="this.state"></add-player>
 
         <set-flag v-bind:state="this.state"></set-flag>
 
@@ -36,11 +35,11 @@
 
 <style scoped>
     .interaction {
-        background-image: url("../../assets/paper.png");
+        /*background-image: url("../../assets/paper.png");*/
         background-size: contain;
         background-repeat: no-repeat;
-        height: 400px;
-        width: 500px;
+        height: 600px;
+        width: 600px;
         padding-top: 5vw;
     }
 

@@ -39,6 +39,6 @@
 <style scoped>
  .walk {
      width: 20vw;
-     margin-left: 4vw;
+     margin-left: 7vw;
  }
 </style>
