@@ -5,12 +5,16 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "preinstall": "npm run build",
+    "start": "node server.js"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
     "bootstrap-vue": "^2.20.1",
     "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "serve-static": "^1.14.1",
     "vue": "^2.6.12",
     "vue-resource": "^1.5.1",
     "vue-uuid": "^2.0.2"
@@ -25,7 +29,8 @@
     "vue-native-websocket": "^2.0.14",
     "vue-router": "^3.4.9",
     "vue-template-compiler": "^2.6.11",
-    "vue-toastification": "^1.7.8"
+    "vue-toastification": "^1.7.8",
+    "vuex": "^3.6.0"
   },
   "eslintConfig": {
     "root": true,

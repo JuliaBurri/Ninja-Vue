@@ -4,7 +4,9 @@
             <b-row>
 
                 <b-col class="col-6">
-                    <Field @clicked="onClickChild" :field="this.field"></Field>
+                    <Field @clicked="onClickChild" v-bind:field="this.field"
+                           v-bind:current-player="this.currentPlayer"
+                    ></Field>
                 </b-col>
 
                 <b-col class="interaction col-2">
@@ -23,14 +25,15 @@
 
     export default {
         name: "Game",
-        state: String,
-        selected: String,
+        state: '',
+
 
         data() {
             return {
-                state: String,
-                field: Array,
-                selected: String
+                state: '',
+                currentPlayer: null,
+                field: [],
+                selected: '',
             }
         },
 
@@ -57,9 +60,14 @@
                 window.console.log("Came in: ", json);
                 this.state = json.state;
                 this.field = json.desk.field;
-            };
 
-            this.$socket.send(JSON.stringify({type: "state"}))
+                if(json.desk.player1.state == 'go') {
+                     this.currentPlayer = json.desk.player1.id;
+                } else if (json.desk.player2.state == 'go') {
+                     this.currentPlayer = json.desk.player2.id;
+                }
+            };
+           // this.$socket.send(JSON.stringify({type: "state"}))
         }
     }
 </script>

@@ -18,24 +18,30 @@
     export default {
         name: "AddPlayer",
 
+        data() {
+            return {
+                playerName: null
+            }
+        },
+
         props: {
             state: String
         },
 
         methods: {
             addPlayer1() {
-                console.log("add player 1")
                 this.$socket.send(JSON.stringify({
                     type: "player1",
                     name: document.getElementById("input-name1").value
                 }))
+                this.$store.commit('SET_PLAYER_NAME', 1)
             },
             addPlayer2() {
-                console.log("add player 2")
                 this.$socket.send(JSON.stringify({
                     type: "player2",
                     name: document.getElementById("input-name2").value
                 }))
+                this.$store.commit('SET_PLAYER_NAME', 2)
             }
         }
     }

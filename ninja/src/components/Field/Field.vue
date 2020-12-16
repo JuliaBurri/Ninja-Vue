@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-2" v-bind:key="i" v-for="i in 36">
                     <b-btn class="ninja-btn"
-                           :class="field[i-1].cell.ninja.weapon"
+                           :class="getNinjaClass(i)"
                            :id="getNinjaId(field[i-1])"
                            v-on:click="onClickButton('clicked',getNinjaId(field[i-1]))"
                     >
@@ -23,10 +23,9 @@
     export default {
         name: "Field",
 
-
         props: {
             field: Array,
-            selected: String
+            currentPlayer: Number,
         },
 
         data() {
@@ -34,7 +33,6 @@
                 rows: 6,
                 cols: 6,
                 cells: 36,
-
             }
         },
 
@@ -46,9 +44,36 @@
                 return ninjaId
             },
 
-            onClickButton (event, id) {
+            onClickButton(event, id) {
                 this.$emit('clicked', id)
             },
+
+            getPlayerFromStore() {
+                return this.$store?.state.playerName
+            },
+
+            isEmptyButton(i) {
+                return this.field[i - 1].cell.ninja === ''
+            },
+
+            getWeapon(i) {
+                return this.field[i - 1].cell.ninja.weapon
+            },
+
+            isOpponentButton(i) {
+                console.log(typeof this.field[i-1].cell.ninja.playerId)
+                return this.getPlayerFromStore() !== this.field[i-1].cell.ninja.playerId.toString()
+            },
+
+            getNinjaClass(i) {
+                if (this.isEmptyButton(i)) {
+                    return ''
+                }
+                if (this.isOpponentButton(i)) {
+                    return 'd'
+                }
+                return this.getWeapon(i)
+            }
         }
     }
 </script>
@@ -82,6 +107,10 @@
 
     .r {
         background-image: url("../../assets/carostein.png");
+    }
+
+    .d {
+        background-image: url("../../assets/ninja.png");
     }
 
 
