@@ -1,7 +1,7 @@
 <template>
     <div class="next-player" v-if="this.state === 'WALKED'">
         <p>Next Player ? </p>
-        <button v-on:click="nextPlayer()" class="btn btn-primary m-2">Next!</button>
+        <v-btn v-on:click="nextPlayer()" color="primary">Next!</v-btn>
     </div>
 </template>
 

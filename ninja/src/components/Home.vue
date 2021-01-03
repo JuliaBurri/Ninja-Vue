@@ -3,81 +3,83 @@
         <h1 class="home-header">Welcome to Ninja</h1>
 
         <br><br>
+        <v-container>
+            <v-row>
+                <v-card class="mx-auto" max-width="300">
+                    <v-img src="../assets/highscore.png"></v-img>
+                    <v-card-title>Highscore</v-card-title>
+                    <v-card-subtitle>Check out your rivals</v-card-subtitle>
+                    <v-card-actions>
+                        <v-btn href="/highscore" color="purple lighten-2" text>
+                            Explore
+                        </v-btn>
+                    </v-card-actions>
+                </v-card>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <div class="card shadow" >
-                        <img class="card-img-top" src="../assets/highscore.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Highscore</h5>
-                            <p class="card-text">Check out your rivals <br> </p>
-                            <a href="/highscore" class="btn btn-secondary btn-block">Highscore</a>
-                        </div>
+                <v-card class="mx-auto" max-width="300">
+                    <v-img src="../assets/play.png" max-height="270"></v-img>
+                    <v-card-title>Game</v-card-title>
+                    <v-card-subtitle>Let's Play!</v-card-subtitle>
+                    <v-card-actions>
+                        <v-btn href="/game" color="blue lighten-2" text>
+                            Play
+                        </v-btn>
+                    </v-card-actions>
+                </v-card>
+
+                <v-card class="mx-auto" max-width="300">
+                    <v-img src="../assets/about.png" height="270"></v-img>
+                    <v-card-title>About</v-card-title>
+                    <v-card-subtitle>Learn more about NINJA</v-card-subtitle>
+                    <v-card-actions>
+                        <v-btn href="/about" color="green lighten-2" text>
+                            Explore
+                        </v-btn>
+                    </v-card-actions>
+                </v-card>
+            </v-row>
+        </v-container>
+
+        <v-container class="mt-10">
+            <v-card dark color="grey darken-2" max-width="500" class="mx-auto">
+                <div class="d-flex flex-no-wrap justify-space-between">
+                    <div>
+                        <v-card-title class="headline"> Julia Burri</v-card-title>
+                        <v-card-subtitle>"BEST GAME EVER!!!"</v-card-subtitle>
+                        <v-card-actions>
+                            <v-rating
+                                    background-color="grey"
+                                    color="yellow"
+                                    value="5"
+                            ></v-rating>
+                        </v-card-actions>
                     </div>
+                    <v-avatar class="ma-3" size="125" tile>
+                        <v-img src="../assets/avatar.png"></v-img>
+                    </v-avatar>
                 </div>
-                <div class="col-sm">
-                    <div class="card shadow" >
-                        <img class="card-img-top" src="../assets/play.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Game</h5>
-                            <p class="card-text">
-                                Lets Play<br>
-                            </p>
-                            <a href="/game" class="btn btn-secondary btn-block" @click="this.initSocket()">Game</a>
-                        </div>
+            </v-card>
+
+            <v-card dark color="grey darken-2" max-width="500" class="mt-5 mx-auto">
+                <div class="d-flex flex-no-wrap justify-space-between">
+                    <div>
+                        <v-card-title class="headline"> Helen Nganga</v-card-title>
+                        <v-card-subtitle>"Cool Game, but i always loose..."</v-card-subtitle>
+                        <v-card-actions>
+                            <v-rating
+                                    background-color="grey"
+                                    color="yellow"
+                                    value="4"
+                            ></v-rating>
+                        </v-card-actions>
                     </div>
+                    <v-avatar class="ma-3" size="125" tile>
+                        <v-img src="../assets/avatar.png"></v-img>
+                    </v-avatar>
                 </div>
-                <div class="col-sm">
-                    <div class="card shadow" >
-                        <img class="card-img-top" src="../assets/about.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">About</h5>
-                            <p class="card-text">
-                                Learn more about Ninja <br></p>
-                            <a href="/about" class="btn btn-secondary btn-block">About</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="card rating-card">
-            <div class="card-horizontal">
-                <div class="img-square-wrapper">
-                    <img class="" src="../assets/avatar.png" alt="Card image cap" style="height: 10vw">
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Julia Burri</h4>
-                    <p class="card-text">
-                        Best Game EVER!!!!!! <br></p>
-                    <b-form-rating value="5" variant="warning" class="mb-2"></b-form-rating>
-                </div>
-
-            </div>
-        </div>
-
-
-
-        <div class="card rating-card">
-            <div class="card-horizontal">
-                <div class="img-square-wrapper">
-                    <img class="" src="../assets/avatar.png" alt="Card image cap" style="height: 10vw">
-                </div>
-                <div class="card-body">
-                    <h4 class="card-title">Helen Nganga</h4>
-                    <p class="card-text">
-                        Cool Game, but i always loose <br></p>
-                    <b-form-rating value="4" variant="warning" class="mb-2"></b-form-rating>
-                </div>
-
-            </div>
-        </div>
-
-        <br><br><br><br><br><br><br><br>
-
+            </v-card>
+        </v-container>
+<br><br><br>
     </div>
 </template>
 
@@ -94,7 +96,6 @@
             };
         }
     }
-
 
 
 </script>

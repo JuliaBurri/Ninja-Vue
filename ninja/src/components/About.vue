@@ -8,23 +8,22 @@
             army armed with Rocks, Paper, and Scissors.<br>To win the game capture your opponent's flag.
         </p>
 
-        <img class="flag-img" src="../assets/caroflag.png" width="80" height="80"/>
+        <v-img class="flag-img mx-auto" src="../assets/caroflag.png" width="80" height="80"/>
 
         <h2 class="rules-title">Rules</h2>
-        <b-container class="rules-container">
-            <b-row class="rules-row">
-                <b-col>Scissor beats Paper</b-col>
-                <b-col>Paper beats Rock</b-col>
-                <b-col>Rock beats Scissor</b-col>
-            </b-row>
+        <v-container class="rules-container">
+            <v-row class="rules-row">
+                <v-col>Scissor beats Paper</v-col>
+                <v-col>Paper beats Rock</v-col>
+                <v-col>Rock beats Scissor</v-col>
+            </v-row>
 
-            <b-row class="img-row">
-                <b-col><img class="rules-img" src="../assets/helenschere.png"/></b-col>
-                <b-col><img class="rules-img" src="../assets/helenpapier.png"/></b-col>
-                <b-col><img class="rules-img" src="../assets/carostein.png"/></b-col>
-            </b-row>
-
-        </b-container>
+            <v-row class="img-row ml-15">
+                <v-col><v-img class="rules-img" src="../assets/helenschere.png"/></v-col>
+                <v-col><v-img class="rules-img" src="../assets/helenpapier.png"/></v-col>
+                <v-col><v-img class="rules-img" src="../assets/carostein.png"/></v-col>
+            </v-row>
+        </v-container>
 
 
 

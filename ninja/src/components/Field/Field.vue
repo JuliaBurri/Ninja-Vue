@@ -1,17 +1,17 @@
 <template>
     <div class="field">
-        <b-container>
+        <v-container>
             <div class="row">
                 <div class="col-md-2" v-bind:key="i" v-for="i in 36">
-                    <b-btn class="ninja-btn"
+                    <v-btn class="ninja-btn" width="80" height="80"
                            :class="getNinjaClass(i)"
                            :id="getNinjaId(field[i-1])"
                            v-on:click="onClickButton('clicked',getNinjaId(field[i-1]))"
                     >
-                    </b-btn>
+                    </v-btn>
                 </div>
             </div>
-        </b-container>
+        </v-container>
 
     </div>
 </template>
@@ -82,8 +82,6 @@
     }
 
     .ninja-btn {
-        width: 80px;
-        height: 80px;
         background-repeat: no-repeat;
         background-size: 80px;
         background-color: lightgray;

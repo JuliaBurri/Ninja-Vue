@@ -1,9 +1,9 @@
 <template>
     <div class="walk" v-if="this.state === 'TURN'">
         <p>Select a Ninja and choose a direction</p>
-        <b-form-select v-model="dir" :options="options"></b-form-select>
+        <v-select solo v-model="dir" :items="options"></v-select>
         <div class="mt-3">Selected: <strong>{{ dir }}</strong></div>
-        <button v-on:click="walk()" class="btn btn-primary m-2">Walk!</button>
+        <v-btn v-on:click="walk()" color="primary">Walk!</v-btn>
     </div>
 </template>
 

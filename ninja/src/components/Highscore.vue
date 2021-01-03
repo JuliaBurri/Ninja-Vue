@@ -2,37 +2,34 @@
     <div class="highscore">
 
         <h1 class="highscore-header">Highscore</h1>
-
-        <table class="table table-striped table-dark">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Points</th>
-
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>55</td>
-
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>50</td>
-
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>43</td>
-
-            </tr>
-            </tbody>
-        </table>
+        <v-simple-table dark>
+            <template v-slot:default>
+                <thead>
+                <tr>
+                    <th class="text-left">
+                        Name
+                    </th>
+                    <th class="text-left">
+                        Points
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Mark</td>
+                    <td>55</td>
+                </tr>
+                <tr>
+                    <td>Toni</td>
+                    <td>45</td>
+                </tr>
+                <tr>
+                    <td>Larry</td>
+                    <td>25</td>
+                </tr>
+                </tbody>
+            </template>
+        </v-simple-table>
 
     </div>
 </template>

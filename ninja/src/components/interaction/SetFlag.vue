@@ -3,12 +3,12 @@
 
         <div class="set-flag1" v-if="this.state === 'SET_FLAG_1'">
             <p>Please select a Ninja</p>
-            <button v-on:click="setFlag1()" class="btn btn-primary m-2">Set Flag!</button>
+            <v-btn v-on:click="setFlag1()" color="primary">Set Flag!</v-btn>
         </div>
 
         <div class="set-flag2" v-if="this.state === 'SET_FLAG_2'">
             <p>Please select a Ninja</p>
-            <button v-on:click="setFlag2()" class="btn btn-primary m-2">Set Flag!</button>
+            <v-btn v-on:click="setFlag2()" color="primary">Set Flag!</v-btn>
         </div>
 
     </div>

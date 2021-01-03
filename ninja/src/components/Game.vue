@@ -1,20 +1,18 @@
 <template>
     <div class="game">
-        <b-container class="game-container" fluid>
-            <b-row>
-
-                <b-col class="col-6">
+        <v-container class="game-container" fluid>
+            <v-row>
+                <v-col class="col-6">
                     <Field @clicked="onClickChild" v-bind:field="this.field"
                            v-bind:current-player="this.currentPlayer"
                     ></Field>
-                </b-col>
+                </v-col>
 
-                <b-col class="interaction col-2">
+                <v-col class="interaction col-2">
                     <interaction :state="this.state" :selected="this.selected"></interaction>
-                </b-col>
-
-            </b-row>
-        </b-container>
+                </v-col>
+            </v-row>
+        </v-container>
     </div>
 
 </template>
