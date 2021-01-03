@@ -18,10 +18,6 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(VueResource)
 
-
-Vue.http.options.root = 'http://localhost:9000/'
-Vue.config.productionTip = false
-
 Vue.use(VueRouter);
 Vue.use(VueNativeSock, 'ws://localhost:9000/websocket', {
   reconnection: true,
