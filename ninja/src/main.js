@@ -24,9 +24,9 @@ Vue.config.productionTip = false
 
 Vue.use(VueRouter);
 Vue.use(VueNativeSock, 'ws://localhost:9000/websocket', {
-  reconnection: true, // (Boolean) whether to reconnect automatically (false)
-  reconnectionAttempts: Infinity, // (Number) number of reconnection attempts before giving up (Infinity),
-  reconnectionDelay: 10, // (Number) how long to initially wait before attempting a new (1000)
+  reconnection: true,
+  reconnectionAttempts: Infinity,
+  reconnectionDelay: 10,
 });
 Vue.use(Toast, {});
 

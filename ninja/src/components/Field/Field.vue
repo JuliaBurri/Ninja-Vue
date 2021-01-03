@@ -9,10 +9,8 @@
                            v-on:click="onClickButton('clicked',getNinjaId(field[i-1]))"
                     >
                     </b-btn>
-
                 </div>
             </div>
-
         </b-container>
 
     </div>
@@ -61,8 +59,7 @@
             },
 
             isOpponentButton(i) {
-                console.log(typeof this.field[i-1].cell.ninja.playerId)
-                return this.getPlayerFromStore() !== this.field[i-1].cell.ninja.playerId.toString()
+                return this.getPlayerFromStore() != this.field[i-1].cell.ninja.playerId.toString()
             },
 
             getNinjaClass(i) {
