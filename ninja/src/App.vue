@@ -9,7 +9,7 @@
 
 <script>
 import AppBar from "./components/AppBar";
-import Home from "./components/Home";
+import Home from "./views/Home";
 
 export default {
   name: 'App',

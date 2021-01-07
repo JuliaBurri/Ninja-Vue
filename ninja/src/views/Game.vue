@@ -18,8 +18,8 @@
 </template>
 
 <script>
-    import Interaction from "./interaction/Interaction"
-    import Field from "./Field/Field"
+    import Interaction from "../components/interaction/Interaction"
+    import Field from "../components/Field/Field"
 
     export default {
         name: "Game",
