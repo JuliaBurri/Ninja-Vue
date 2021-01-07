@@ -10,6 +10,7 @@ import VueNativeSock from 'vue-native-websocket'
 import VueResource from 'vue-resource'
 import store from "./store";
 import vuetify from './plugins/vuetify'
+import './registerServiceWorker'
 
 Vue.use(VueResource)
 
