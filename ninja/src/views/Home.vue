@@ -94,7 +94,7 @@
                 const json = JSON.parse(data.data);
                 window.console.log("Came in: ", json);
             };
-        }
+        },
     }
 
 
