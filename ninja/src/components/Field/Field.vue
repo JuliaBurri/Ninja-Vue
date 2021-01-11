@@ -1,16 +1,29 @@
 <template>
     <div class="field">
-        <v-container>
-            <div class="row">
-                <div class="col-md-2" v-bind:key="i" v-for="i in 36">
-                    <v-btn class="ninja-btn" width="80" height="80"
+        <v-container class="field-lg hidden-sm-and-down">
+            <v-row no-gutters class="col-9">
+                <v-col v-bind:key="i" v-for="i in 36">
+                    <v-card class="ninja-btn" width="60px" height="60px"
                            :class="getNinjaClass(i)"
                            :id="getNinjaId(field[i-1])"
                            v-on:click="onClickButton('clicked',getNinjaId(field[i-1]))"
                     >
-                    </v-btn>
-                </div>
-            </div>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-container>
+
+            <v-container class="field-sm hidden-md-and-up">
+            <v-row no-gutters>
+                <v-col v-bind:key="i" v-for="i in 36">
+                    <v-card class="ninja-btn" width="50px" height="50px"
+                           :class="getNinjaClass(i)"
+                           :id="getNinjaId(field[i-1])"
+                           v-on:click="onClickButton('clicked',getNinjaId(field[i-1]))"
+                    >
+                    </v-card>
+                </v-col>
+            </v-row>
         </v-container>
 
     </div>
@@ -76,16 +89,20 @@
 </script>
 
 <style scoped>
-    .field {
-        margin-left: 5vw;
-        width: 60%;
+    .field-lg {
+        margin-left: 5vh;
+        width: 600px;
+    }
+
+    .field-sm {
+        width: 350px;
     }
 
     .ninja-btn {
         background-repeat: no-repeat;
-        background-size: 80px;
-        background-color: lightgray;
-
+        background-size: contain;
+        background-color: ghostwhite;
+        border: lightgrey solid 1px;
     }
 
     .f {

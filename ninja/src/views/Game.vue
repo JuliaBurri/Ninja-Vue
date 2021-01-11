@@ -2,13 +2,13 @@
     <div class="game">
         <v-container class="game-container" fluid>
             <v-row>
-                <v-col class="col-6">
+                <v-col class="col-sm-12 col-md-6">
                     <Field @clicked="onClickChild" v-bind:field="this.field"
                            v-bind:current-player="this.currentPlayer"
                     ></Field>
                 </v-col>
 
-                <v-col class="interaction col-2">
+                <v-col class="interaction col-sm-12 col-md-2">
                     <interaction :state="this.state" :selected="this.selected"></interaction>
                 </v-col>
             </v-row>
@@ -59,13 +59,13 @@
                 this.state = json.state;
                 this.field = json.desk.field;
 
-                if(json.desk.player1.state == 'go') {
-                     this.currentPlayer = json.desk.player1.id;
+                if (json.desk.player1.state == 'go') {
+                    this.currentPlayer = json.desk.player1.id;
                 } else if (json.desk.player2.state == 'go') {
-                     this.currentPlayer = json.desk.player2.id;
+                    this.currentPlayer = json.desk.player2.id;
                 }
             };
-           // this.$socket.send(JSON.stringify({type: "state"}))
+            // this.$socket.send(JSON.stringify({type: "state"}))
         }
     }
 </script>

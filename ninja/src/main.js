@@ -28,9 +28,10 @@ const router = new VueRouter({
     {path: '/game', name: "Game", component: Game},
     {path: '/highscore', name: "Highscore", component: Highscore},
     {path: '/about', name: "About", component: About},
-    {path: '/', name: "Home", component: Home}
+    {path: '/', name: "Home", component: Home},
+    {path :'*', component: Home}
+  ],
 
-  ]
 });
 
 new Vue({

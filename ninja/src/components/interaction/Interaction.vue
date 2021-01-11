@@ -1,5 +1,5 @@
 <template>
-    <div class="interaction">
+    <div class="interaction mx-auto">
 
         <add-player v-bind:state="this.state"></add-player>
 
@@ -37,12 +37,7 @@
 
 <style scoped>
     .interaction {
-        /*background-image: url("../../assets/paper.png");*/
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 600px;
-        width: 600px;
-        padding-top: 5vw;
+        width: 250px;
     }
 
 </style>

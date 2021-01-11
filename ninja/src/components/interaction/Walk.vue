@@ -25,7 +25,6 @@
                     { value: 'd', text: 'DOWN'},
                     { value: 'r', text: 'RIGHT'},
                     { value: 'l', text: 'LEFT'},
-
                 ]
             }
         },
@@ -38,8 +37,5 @@
 </script>
 
 <style scoped>
- .walk {
-     width: 20vw;
-     margin-left: 7vw;
- }
+
 </style>

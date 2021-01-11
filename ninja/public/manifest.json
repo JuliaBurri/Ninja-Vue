@@ -1,10 +1,16 @@
 {
-  "name": "Ninja as WebApp",
+  "name": "Ninja App",
   "short_name": "Ninja",
   "start_url": "index.html",
   "display": "standalone",
   "theme_color": "#0476F2",
   "background_color": "#fff",
+  "scope": "/",
   "icons": [
+    {
+      "src": "./public/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
   ]
 }
