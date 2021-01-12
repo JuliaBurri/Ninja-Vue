@@ -48,11 +48,19 @@
         },
 
         created() {
-
+            console.log("JULIAN ist toll")
             this.$socket.onopen = () => {
                 console.log('WebSocket opened');
                 this.$socket.send(JSON.stringify({type: "state"}))
             }
+
+                try {
+                    this.$socket.send(JSON.stringify({type: "state"}));
+                } catch {
+                    console.log("socket send try catch")
+                }
+
+
             this.$options.sockets.onmessage = (data) => {
                 const json = JSON.parse(data.data);
                 window.console.log("Came in: ", json);

@@ -8,8 +8,8 @@
   "scope": "/",
   "icons": [
     {
-      "src": "./public/favicon.png",
-      "sizes": "192x192",
+      "src": "favicon.ico",
+      "sizes": "192x202",
       "type": "image/png"
     }
   ]

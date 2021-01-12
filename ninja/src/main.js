@@ -23,7 +23,7 @@ Vue.use(VueNativeSock, 'ws://localhost:9000/websocket', {
 Vue.use(Toast, {});
 
 const router = new VueRouter({
-  mode: 'history',
+//  mode: 'hash',
   routes: [
     {path: '/game', name: "Game", component: Game},
     {path: '/highscore', name: "Highscore", component: Highscore},

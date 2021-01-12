@@ -10,7 +10,7 @@
                     <v-card-title>Highscore</v-card-title>
                     <v-card-subtitle>Check out your rivals</v-card-subtitle>
                     <v-card-actions>
-                        <v-btn href="/highscore" color="purple lighten-2" text>
+                        <v-btn to="/highscore" color="purple lighten-2" text>
                             Explore
                         </v-btn>
                     </v-card-actions>
@@ -21,7 +21,7 @@
                     <v-card-title>Game</v-card-title>
                     <v-card-subtitle>Let's Play!</v-card-subtitle>
                     <v-card-actions>
-                        <v-btn href="/game" color="blue lighten-2" text>
+                        <v-btn to="/game" color="blue lighten-2" text>
                             Play
                         </v-btn>
                     </v-card-actions>
@@ -32,7 +32,7 @@
                     <v-card-title>About</v-card-title>
                     <v-card-subtitle>Learn more about NINJA</v-card-subtitle>
                     <v-card-actions>
-                        <v-btn href="/about" color="green lighten-2" text>
+                        <v-btn to="/about" color="green lighten-2" text>
                             Explore
                         </v-btn>
                     </v-card-actions>
