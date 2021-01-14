@@ -23,7 +23,7 @@
         >
             <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-            <router-link to="/" class="ml-2">
+            <router-link to="/home" class="ml-2">
                 <v-img class="logo mt-2" contain
                        :src="require('@/assets/ninjaBlack.png')"
                        max-width="60">
@@ -43,7 +43,7 @@
             drawer: false,
             group: null,
             tabs : [
-                {name: "Home", route: '/', icon: 'mdi-home'},
+                {name: "Home", route: '/home', icon: 'mdi-home'},
                 {name: "Game", route: "/game", icon: 'mdi-play-circle'},
                 {name: "Highscore", route: "/highscore", icon: 'mdi-clipboard-list'},
                 {name: "About", route: "/about", icon: 'mdi-message-processing'},
