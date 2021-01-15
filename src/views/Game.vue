@@ -7,7 +7,7 @@
             <v-btn @click="goToLogin">Login</v-btn>
         </v-container>
 
-        <v-container class="game-container" fluid>
+        <v-container class="game-container" fluid v-if="signedIn">
             <v-row>
                 <v-col class="col-sm-12 col-md-6">
                     <Field @clicked="onClickChild" v-bind:field="this.field"
@@ -63,7 +63,6 @@
         },
 
         created() {
-            console.log("JULIAN ist toll")
             this.$socket.onopen = () => {
                 console.log('WebSocket opened');
                 this.$socket.send(JSON.stringify({type: "state"}))
@@ -77,6 +76,7 @@
 
 
             this.$options.sockets.onmessage = (data) => {
+                this.signedIn = true;
                 const json = JSON.parse(data.data);
                 window.console.log("Came in: ", json);
                 this.state = json.state;
