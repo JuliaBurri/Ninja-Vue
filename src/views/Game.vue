@@ -53,7 +53,7 @@
             },
 
             goToLogin() {
-                window.open("http://localhost:9000", '_blank');
+                window.open("https://ninja-backend.herokuapp.com/signIn", '_blank');
             }
         },
 
