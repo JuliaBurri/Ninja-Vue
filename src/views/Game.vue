@@ -53,7 +53,7 @@
             },
 
             goToLogin() {
-                window.open("https://ninja-backend.herokuapp.com/signIn", '_blank');
+                window.open("https://ninja-backend.herokuapp.com", '_blank');
             }
         },
 
