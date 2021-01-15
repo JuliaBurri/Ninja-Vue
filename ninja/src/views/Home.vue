@@ -1,14 +1,8 @@
 <template>
     <div class="home">
         <h1 class="home-header">Welcome to Ninja</h1>
-
-        <v-container v-if="!signedIn" class="text-center mt-2">
-            <p>Please sign in first.</p>
-            <v-btn href=":9000">TRY AGAIN</v-btn>
-        </v-container>
-
         <br><br>
-        <v-container v-if="signedIn">
+        <v-container>
             <v-row>
                 <v-card class="mx-auto" max-width="300">
                     <v-img src="../assets/highscore.png"></v-img>
@@ -100,11 +94,6 @@
                 window.console.log("Came in: ", json);
             };
         },
-
-        data: () => ({
-            signedIn: false
-        }),
-
     }
 
 
