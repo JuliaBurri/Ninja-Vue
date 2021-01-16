@@ -1,12 +1,5 @@
 <template>
     <div class="game">
-
-        <v-container v-if="!signedIn" class="text-center pt-15">
-            <strong>Please sign in first.</strong>
-            <v-btn class="mx-3" @click="reload">TRY AGAIN</v-btn>
-            <v-btn @click="goToLogin">Login</v-btn>
-        </v-container>
-
         <v-container class="game-container" fluid v-if="signedIn">
             <v-row>
                 <v-col class="col-sm-12 col-md-6">
@@ -48,13 +41,6 @@
                 this.selected = value;
                 console.log("SELECTED: " + this.selected)
             },
-            reload() {
-                this.$router.go(0)
-            },
-
-            goToLogin() {
-                window.open("https://ninja-backend.herokuapp.com", '_blank');
-            }
         },
 
         components: {
