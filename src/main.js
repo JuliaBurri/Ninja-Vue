@@ -16,7 +16,7 @@ Vue.use(VueResource)
 
 Vue.use(VueRouter);
 
-let HOST = location.origin.replace(/^https/, 'wss')
+let HOST = location.origin.replace('https', 'wss')
 
 Vue.use(VueNativeSock(HOST),  {
   reconnection: true,
