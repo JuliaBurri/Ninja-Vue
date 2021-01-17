@@ -16,7 +16,7 @@ Vue.use(VueResource)
 
 Vue.use(VueRouter);
 Vue.use(VueNativeSock, ('wss://ninja-backend.herokuapp.com/websocket', {
-  origin: 'https://ninja-backend.herokuapp.com/websocket'
+  origin: 'https://ninja-backend.herokuapp.com'
 }), {
   reconnection: true,
   reconnectionAttempts: Infinity,
