@@ -15,7 +15,9 @@ import './registerServiceWorker'
 Vue.use(VueResource)
 
 Vue.use(VueRouter);
-Vue.use(VueNativeSock, ('wss://ninja-backend.herokuapp.com/websocket'), {
+Vue.use(VueNativeSock, ('wss://ninja-backend.herokuapp.com/websocket', {
+  origin: 'https://ninja-backend.herokuapp.com/websocket'
+}), {
   reconnection: true,
   reconnectionAttempts: Infinity,
   reconnectionDelay: 10,
