@@ -49,7 +49,7 @@
                             <v-rating
                                     background-color="grey"
                                     color="yellow"
-                                    value="5"
+                                    :value="5"
                             ></v-rating>
                         </v-card-actions>
                     </div>
@@ -68,7 +68,7 @@
                             <v-rating
                                     background-color="grey"
                                     color="yellow"
-                                    value="4"
+                                    :value="4"
                             ></v-rating>
                         </v-card-actions>
                     </div>
